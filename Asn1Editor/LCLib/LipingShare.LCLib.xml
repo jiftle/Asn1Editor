@@ -1,0 +1,1476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LipingShare.LCLib</name>
+    </assembly>
+    <members>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1Util">
+            <summary>
+            Utility functions.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.IsAsn1EncodedHexStr(System.String)">
+            <summary>
+            Check if the string is ASN.1 encoded hex string.
+            </summary>
+            <param name="dataStr">The string.</param>
+            <returns>true:Yes, false:No.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.FormatString(System.String,System.Int32,System.Int32)">
+            <summary>
+            Format a string to have certain line length and character group length.
+            Sample result FormatString(xstr,32,2):
+            <code>07 AE 0B E7 84 5A D4 6C 6A BD DF 8F 89 88 9E F1</code>
+            </summary>
+            <param name="inStr">source string.</param>
+            <param name="lineLen">line length.</param>
+            <param name="groupLen">group length.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.GenStr(System.Int32,System.Char)">
+            <summary>
+            Generate a string by duplicating <see cref="T:System.Char"/> xch.
+            </summary>
+            <param name="len">duplicate times.</param>
+            <param name="xch">the duplicated character.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.BytesToLong(System.Byte[])">
+            <summary>
+            Convert byte array to a <see cref="T:System.Int64"/> integer.
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.BytesToString(System.Byte[])">
+            <summary>
+            Convert a ASCII byte array to string, also fielter out the null characters.
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.StringToBytes(System.String)">
+            <summary>
+            Convert ASCII string to byte array.
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.IsEqual(System.Byte[],System.Byte[])">
+            <summary>
+            Compare source and target byte array.
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Util.hexDigits">
+            <summary>
+            Constant hex digits array.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.ToHexString(System.Byte[])">
+            <summary>
+            Convert a byte array to hex string.
+            </summary>
+            <param name="bytes">source array.</param>
+            <returns>hex string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.IsValidHexDigits(System.Char)">
+            <summary>
+            Check if the character is a valid hex digits.
+            </summary>
+            <param name="ch">source character.</param>
+            <returns>true:Valid, false:Invalid.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.GetHexDigitsVal(System.Char)">
+            <summary>
+            Get hex digits value.
+            </summary>
+            <param name="ch">source character.</param>
+            <returns>hex digits value.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.HexStrToBytes(System.String)">
+            <summary>
+            Convert hex string to byte array.
+            </summary>
+            <param name="hexStr">Source hex string.</param>
+            <returns>return byte array.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.IsHexStr(System.String)">
+            <summary>
+            Check if the source string is a valid hex string.
+            </summary>
+            <param name="hexStr">source string.</param>
+            <returns>true:Valid, false:Invalid.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.IsPemFormated(System.String)">
+            <summary>
+            Check if the source string is PEM formated string.
+            </summary>
+            <param name="pemStr">source string.</param>
+            <returns>true:Valid, false:Invalid.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.IsPemFormatedFile(System.String)">
+            <summary>
+            Check if a file is PEM formated.
+            </summary>
+            <param name="fileName">source file name.</param>
+            <returns>true:Yes, false:No.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.PemToStream(System.String)">
+            <summary>
+            Convert PEM formated string into <see cref="T:System.IO.Stream"/> and set the Stream position to 0.
+            </summary>
+            <param name="pemStr">source string.</param>
+            <returns>output stream.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.PemToBytes(System.String)">
+            <summary>
+            Convert PEM formated string into byte array.
+            </summary>
+            <param name="pemStr">source string.</param>
+            <returns>output byte array.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.BytesToPem(System.Byte[])">
+            <summary>
+            Convert byte array to PEM formated string.
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.GetPemFileHeader(System.String)">
+            <summary>
+            Retrieve PEM file heading.
+            </summary>
+            <param name="fileName">source file name.</param>
+            <returns>heading string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.GetPemHeader(System.String)">
+            <summary>
+            Retrieve PEM heading from a PEM formated string.
+            </summary>
+            <param name="pemStr">source string.</param>
+            <returns>heading string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.BytesToPem(System.Byte[],System.String)">
+            <summary>
+            Convert byte array to PEM formated string and set the heading as pemHeader.
+            </summary>
+            <param name="data">source array.</param>
+            <param name="pemHeader">PEM heading.</param>
+            <returns>PEM formated string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.BitPrecision(System.UInt64)">
+            <summary>
+            Calculate how many bits is enough to hold ivalue.
+            </summary>
+            <param name="ivalue">source value.</param>
+            <returns>bits number.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.BytePrecision(System.UInt64)">
+            <summary>
+            Calculate how many bytes is enough to hold the value.
+            </summary>
+            <param name="value">input value.</param>
+            <returns>bytes number.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.DERLengthEncode(System.IO.Stream,System.UInt64)">
+            <summary>
+            ASN.1 DER length encoder.
+            </summary>
+            <param name="xdata">result output stream.</param>
+            <param name="length">source length.</param>
+            <returns>result bytes.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.DerLengthDecode(System.IO.Stream,System.Boolean@)">
+            <summary>
+            ASN.1 DER length decoder.
+            </summary>
+            <param name="bt">Source stream.</param>
+            <param name="isIndefiniteLength">Output parameter.</param>
+            <returns>Output length.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.GetTagName(System.Byte)">
+            <summary>
+            Decode tag value to return tag name.
+            </summary>
+            <param name="tag">input tag.</param>
+            <returns>tag name.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.ReadRegInfo(System.String,System.String)">
+            <summary>
+            Read registry information from local machine entrys.
+            </summary>
+            <param name="path"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.WriteRegInfo(System.String,System.String,System.Object)">
+            <summary>
+            Write information into local machine registry entry.
+            </summary>
+            <param name="path"></param>
+            <param name="name"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Util.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Oid">
+            <summary>
+            Summary description for OID.
+            This class is used to encode and decode OID strings.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.GetOidName(System.String)">
+            <summary>
+            Retrieve OID name by OID string.
+            </summary>
+            <param name="inOidStr">source OID string.</param>
+            <returns>OID name.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.Encode(System.String)">
+            <summary>
+            Encode OID string to byte array.
+            </summary>
+            <param name="oidStr">source string.</param>
+            <returns>encoded array.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.Decode(System.Byte[])">
+            <summary>
+            Decode OID byte array to OID string.
+            </summary>
+            <param name="data">source byte array.</param>
+            <returns>result OID string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.Encode(System.IO.Stream,System.String)">
+            <summary>
+            Encode OID string and put result into <see cref="T:System.IO.Stream"/>
+            </summary>
+            <param name="bt">output stream.</param>
+            <param name="oidStr">source OID string.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.Decode(System.IO.Stream)">
+            <summary>
+            Decode OID <see cref="T:System.IO.Stream"/> and return OID string.
+            </summary>
+            <param name="bt">source stream.</param>
+            <returns>result OID string.</returns>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Oid.oidDictionary">
+            <summary>
+            OID dictionary.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.EncodeValue(System.IO.Stream,System.UInt64)">
+            <summary>
+            Encode single OID value.
+            </summary>
+            <param name="bt">output stream.</param>
+            <param name="v">source value.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Oid.DecodeValue(System.IO.Stream,System.UInt64@)">
+            <summary>
+            Decode single OID value.
+            </summary>
+            <param name="bt">source stream.</param>
+            <param name="v">output value</param>
+            <returns>OID value bytes.</returns>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.RelativeOid">
+            <summary>
+            Summary description for RelativeOid.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.RelativeOid.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.RelativeOid.Encode(System.IO.Stream,System.String)">
+            <summary>
+            Encode relative OID string and put result into <see cref="T:System.IO.Stream"/>
+            </summary>
+            <param name="bt">output stream.</param>
+            <param name="oidStr">source OID string.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.RelativeOid.Decode(System.IO.Stream)">
+            <summary>
+            Decode relative OID <see cref="T:System.IO.Stream"/> and return OID string.
+            </summary>
+            <param name="bt">source stream.</param>
+            <returns>result OID string.</returns>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.IAsn1Node">
+            <summary>
+            IAsn1Node interface.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.LoadData(System.IO.Stream)">
+            <summary>
+            Load data from Stream.
+            </summary>
+            <param name="xdata"></param>
+            <returns>true:Succeed; false:failed.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.SaveData(System.IO.Stream)">
+            <summary>
+            Save node data into Stream.
+            </summary>
+            <param name="xdata">Stream.</param>
+            <returns>true:Succeed; false:failed.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.AddChild(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Add child node at the end of children list.
+            </summary>
+            <param name="xdata">Asn1Node</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.InsertChild(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Insert a node in the children list before the pointed index.
+            </summary>
+            <param name="xdata">Asn1Node</param>
+            <param name="index">0 based index.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.InsertChild(LipingShare.LCLib.Asn1Processor.Asn1Node,LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Insert a node in the children list before the pointed node.
+            </summary>
+            <param name="xdata">Asn1Node that will be instered in the children list.</param>
+            <param name="indexNode">Index node.</param>
+            <returns>New node index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.InsertChildAfter(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Insert a node in the children list after the pointed index.
+            </summary>
+            <param name="xdata">Asn1Node</param>
+            <param name="index">0 based index.</param>
+            <returns>New node index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.InsertChildAfter(LipingShare.LCLib.Asn1Processor.Asn1Node,LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Insert a node in the children list after the pointed node.
+            </summary>
+            <param name="xdata">Asn1Node that will be instered in the children list.</param>
+            <param name="indexNode">Index node.</param>
+            <returns>New node index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.RemoveChild(System.Int32)">
+            <summary>
+            Remove a child from children node list by index.
+            </summary>
+            <param name="index">0 based index.</param>
+            <returns>The Asn1Node just removed from the list.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.RemoveChild(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Remove the child from children node list.
+            </summary>
+            <param name="node">The node needs to be removed.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.GetChildNode(System.Int32)">
+            <summary>
+            Retrieve child node by index.
+            </summary>
+            <param name="index">0 based index.</param>
+            <returns>0 based index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.GetDescendantNodeByPath(System.String)">
+            <summary>
+            Get descendant node by node path.
+            </summary>
+            <param name="nodePath">relative node path that refer to current node.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.GetText(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Get the node and all the descendents text description.
+            </summary>
+            <param name="startNode">starting node.</param>
+            <param name="lineLen">line length.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.GetDataStr(System.Boolean)">
+            <summary>
+            Retrieve the node description.
+            </summary>
+            <param name="pureHexMode">true:Return hex string only;
+            false:Convert to more readable string depending on the node tag.</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.GetLabel(System.UInt32)">
+            <summary>
+            Get node label string.
+            </summary>
+            <param name="mask">
+            <code>
+            SHOW_OFFSET
+            SHOW_DATA
+            USE_HEX_OFFSET
+            SHOW_TAG_NUMBER
+            SHOW_PATH</code>
+            </param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.Clone">
+            <summary>
+            Clone a new Asn1Node by current node.
+            </summary>
+            <returns>new node.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.IAsn1Node.ClearAll">
+            <summary>
+            Clear data and children list.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.ParentNode">
+            <summary>
+            Get parent node.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.ChildNodeCount">
+            <summary>
+            Get child node count.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.Tag">
+            <summary>
+            Get/Set tag value.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.TagName">
+            <summary>
+            Get tag name.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.DataLength">
+            <summary>
+            Get data length. Not included the unused bits byte for BITSTRING.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.LengthFieldBytes">
+            <summary>
+            Get the length field bytes.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.DataOffset">
+            <summary>
+            Get data offset.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.UnusedBits">
+            <summary>
+            Get unused bits for BITSTRING.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.Data">
+            <summary>
+            Get/Set node data by byte[], the data length field content and all the 
+            node in the parent chain will be adjusted.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.ParseEncapsulatedData">
+            <summary>
+            Get/Set parseEncapsulatedData. This property will be inherited by the 
+            child nodes when loading data.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.Deepness">
+            <summary>
+            Get the deepness of the node.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.IAsn1Node.Path">
+            <summary>
+            Get the path string of the node.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1Node">
+            <summary>
+            Asn1Node, implemented IAsn1Node interface.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.defaultLineLen">
+            <summary>
+            Default Asn1Node text line length.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.minLineLen">
+            <summary>
+            Minium line length.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.TagLength">
+            <summary>
+            Constant of tag field length.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.BitStringUnusedFiledLength">
+            <summary>
+            Constant of unused bits field length.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.#ctor">
+            <summary>
+            Constructor, initialize all the members.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.Clone">
+            <summary>
+            Clone a new Asn1Node by current node.
+            </summary>
+            <returns>new node.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.LoadData(System.Byte[])">
+            <summary>
+            Load data from byte[].
+            </summary>
+            <param name="byteData">byte[]</param>
+            <returns>true:Succeed; false:failed.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetDescendantNodeCount(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Retrieve all the node count in the node subtree.
+            </summary>
+            <param name="node">starting node.</param>
+            <returns>long integer node count in the node subtree.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.LoadData(System.IO.Stream)">
+            <summary>
+            Load data from Stream. Start from current position.
+            This function sets requireRecalculatePar to false then calls InternalLoadData 
+            to complish the task.
+            </summary>
+            <param name="xdata">Stream</param>
+            <returns>true:Succeed; false:failed.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetRawData">
+            <summary>
+            Call SaveData and return byte[] as result instead stream.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.SaveData(System.IO.Stream)">
+            <summary>
+            Save node data into Stream.
+            </summary>
+            <param name="xdata">Stream.</param>
+            <returns>true:Succeed; false:failed.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.ClearAll">
+            <summary>
+            Clear data and children list.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.AddChild(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Add child node at the end of children list.
+            </summary>
+            <param name="xdata">the node that will be add in.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.InsertChild(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Insert a node in the children list before the pointed index.
+            </summary>
+            <param name="xdata">Asn1Node</param>
+            <param name="index">0 based index.</param>
+            <returns>New node index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.InsertChild(LipingShare.LCLib.Asn1Processor.Asn1Node,LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Insert a node in the children list before the pointed node.
+            </summary>
+            <param name="xdata">Asn1Node that will be instered in the children list.</param>
+            <param name="indexNode">Index node.</param>
+            <returns>New node index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.InsertChildAfter(LipingShare.LCLib.Asn1Processor.Asn1Node,LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Insert a node in the children list after the pointed node.
+            </summary>
+            <param name="xdata">Asn1Node</param>
+            <param name="indexNode">Index node.</param>
+            <returns>New node index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.InsertChildAfter(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Insert a node in the children list after the pointed node.
+            </summary>
+            <param name="xdata">Asn1Node that will be instered in the children list.</param>
+            <param name="index">0 based index.</param>
+            <returns>New node index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.RemoveChild(System.Int32)">
+            <summary>
+            Remove a child from children node list by index.
+            </summary>
+            <param name="index">0 based index.</param>
+            <returns>The Asn1Node just removed from the list.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.RemoveChild(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Remove the child from children node list.
+            </summary>
+            <param name="node">The node needs to be removed.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetChildNode(System.Int32)">
+            <summary>
+            Retrieve child node by index.
+            </summary>
+            <param name="index">0 based index.</param>
+            <returns>0 based index.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetText(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Get the node and all the descendents text description.
+            </summary>
+            <param name="startNode">starting node.</param>
+            <param name="lineLen">line length.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetDataStr(System.Boolean)">
+            <summary>
+            Retrieve the node description.
+            </summary>
+            <param name="pureHexMode">true:Return hex string only;
+            false:Convert to more readable string depending on the node tag.</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetLabel(System.UInt32)">
+            <summary>
+            Get node label string.
+            </summary>
+            <param name="mask">
+            <code>
+            SHOW_OFFSET
+            SHOW_DATA
+            USE_HEX_OFFSET
+            SHOW_TAG_NUMBER
+            SHOW_PATH</code>
+            </param>
+            <returns>string</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetDescendantNodeByPath(System.String)">
+            <summary>
+            Get descendant node by node path.
+            </summary>
+            <param name="nodePath">relative node path that refer to current node.</param>
+            <returns></returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetDecendantNodeByOid(System.String,LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Get node by OID.
+            </summary>
+            <param name="oid">OID.</param>
+            <param name="startNode">Starting node.</param>
+            <returns>Null or Asn1Node.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.RecalculateTreePar">
+            <summary>
+            Find root node and recalculate entire tree length field, 
+            path, offset and deepness.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.ResetBranchDataLength(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Recursively set all the node data length.
+            </summary>
+            <param name="node"></param>
+            <returns>node data length.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.ResetDataLengthFieldWidth(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Encode the node data length field and set lengthFieldBytes and dataLength.
+            </summary>
+            <param name="node">The node needs to be reset.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.ResetChildNodePar(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int64)">
+            <summary>
+            Recursively set all the child parameters, except dataLength.
+            dataLength is set by ResetBranchDataLength.
+            </summary>
+            <param name="xNode">Starting node.</param>
+            <param name="subOffset">Starting node offset.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetListStr(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Generate all the child text from childNodeList.
+            </summary>
+            <param name="startNode">Starting node.</param>
+            <param name="lineLen">Line length.</param>
+            <returns>Text string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GetIndentStr(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Generate the node indent string.
+            </summary>
+            <param name="startNode">The node.</param>
+            <returns>Text string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.GeneralDecode(System.IO.Stream)">
+            <summary>
+            Decode ASN.1 encoded node Stream data.
+            </summary>
+            <param name="xdata">Stream data.</param>
+            <returns>true:Succeed, false:Failed.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.ListDecode(System.IO.Stream)">
+            <summary>
+            Decode ASN.1 encoded complex data type Stream data.
+            </summary>
+            <param name="xdata">Stream data.</param>
+            <returns>true:Succeed, false:Failed.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.SetData(System.Byte[])">
+            <summary>
+            Set the node data and recalculate the entire tree parameters.
+            </summary>
+            <param name="xdata">byte[] data.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Node.InternalLoadData(System.IO.Stream)">
+            <summary>
+            Load data from Stream. Start from current position.
+            </summary>
+            <param name="xdata">Stream</param>
+            <returns>true:Succeed; false:failed.</returns>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.IsIndefiniteLength">
+            <summary>
+            Get/Set isIndefiniteLength.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.Tag">
+            <summary>
+            Get/Set tag value.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.IsEmptyData">
+            <summary>
+            Get if data is empty.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.ChildNodeCount">
+            <summary>
+            Get child node count.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.TagName">
+            <summary>
+            Get tag name.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.ParentNode">
+            <summary>
+            Get parent node.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.Path">
+            <summary>
+            Get the path string of the node.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.DataLength">
+            <summary>
+            Get data length. Not included the unused bits byte for BITSTRING.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.LengthFieldBytes">
+            <summary>
+            Get the length field bytes.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.Data">
+            <summary>
+            Get/Set node data by byte[], the data length field content and all the 
+            node in the parent chain will be adjusted.
+            <br></br>
+            It return all the child data for constructed node.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.Deepness">
+            <summary>
+            Get the deepness of the node.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.DataOffset">
+            <summary>
+            Get data offset.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.UnusedBits">
+            <summary>
+            Get unused bits for BITSTRING.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.RequireRecalculatePar">
+            <summary>
+            Set/Get requireRecalculatePar. RecalculateTreePar function will not do anything
+            if it is set to false. 
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Node.ParseEncapsulatedData">
+            <summary>
+            Get/Set parseEncapsulatedData. This property will be inherited by the 
+            child nodes when loading data.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask">
+            <summary>
+            Tag text generation mask definition.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask.SHOW_OFFSET">
+            <summary>
+            Show offset.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask.SHOW_DATA">
+            <summary>
+            Show decoded data.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask.USE_HEX_OFFSET">
+            <summary>
+            Show offset in hex format.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask.SHOW_TAG_NUMBER">
+            <summary>
+            Show tag.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask.SHOW_PATH">
+            <summary>
+            Show node path.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.VersionInfo">
+             <summary>
+             Describes Asn1Processor version and copyright related information.
+             <code>
+             Update Info
+             ============
+             
+             03/17/2007: (V2007.03.17 - 1.0.18)
+             1. Build by VS2005 
+             2. Screen positoin changes for supporting dual screens.
+             
+             07/03/2005: (V2005.07.03 - 1.0.17)
+             1. A bug is fixed in the node text viewer to let the saved parameters take effect.
+             
+             06/28/2005: (V2005.06.28 - 1.0.16)
+             1. OID table uniqueness checking and sorting when the OID text file is first used.
+             2. Removed unnecessary references from Asn1Parser and Asn1Node class;
+             for example "using System.Windows.Forms;"
+             for example the last editor winddow position, size, hex viewer state, and text viewer state.
+             3. Added the application friendly name in the registry to have better "open with" support.
+             4. Added Asn1Editor.Configuration class to save some screen related information.
+             5. Zero length bit-string decoding bug fix. -- Thanks to Gustaf Bj鰎klund for fixing the bug.
+             
+             04/04/2005: (V2005.04.02 - 1.0.12)
+             1. Bug fix to show the opening file name.
+             Thanks to Tony Morris for the bug report.
+            
+             04/02/2005: (V2005.04.02 - 1.0.11)
+             1. Supports one command line parameter to open the editing file.
+             
+            	03/27/2005: (V2005.03.27 - 1.0.10)
+            	1. Fixed the OID encoding leading zero(0x80) bug.
+            	Thanks for the bug report. Ref URL:
+            	http://www.codeproject.com/csharp/Asn1Editor.asp?msg=1068457#xx1068457xx
+            	
+            	03/16/2005:
+            	1. Extended the node content text editor content max length to unimited.
+            	2. Display GENERALIZED_TIME correctly.
+            	3. Support RELATIVE-OID.
+            	4. Support customized node text length.
+            	5. Resize the hex viewer together with the main window.
+            	6. Extended the OID table to include the BIO OIDs.
+            	
+            	09/23/2004:
+            	Bug Fix for general string decoding.
+            	
+            	11/05/2003:
+            	Thanks to Xavier Mon閟 for the bug report and suggestions.
+            	Some changes are made to encod/decode UTF8 and BMP string correctly.
+            	
+            	10/10/2003:
+            	Thanks to Joe Hartford for the bug report and suggestions.
+            	1. Asn1Node.Data always return the data that not include it's tag 
+            	and length.
+            	2. Asn1Node.ParseEncapsulatedData property is added to control parsing 
+            	encapsulated data.
+            	3. Asn1Parser.ParseEncapsulatedData is added to control encapsulated
+            	data parsing from the root.
+            	4. ASN.1 Editor support "Parse encapsulated data" at node level.<br></br>
+            	5. Asn1Node.GetRawData() is added to return the same data as SaveData() 
+            	do, but it return byte[] instead stream.
+            	
+            	10/02/2003:
+            	Thanks to Joe Hartford for the bug report and suggestions.
+            	Bug fix for Asn1Util.DerLengthDecode function. It returns -2 
+            	instead throwing exception when meet indefinite length. Actually,
+            	this function should not throw exception because it will stop the
+            	parser to do further decoding.
+            	
+            	09/27/2003:
+            	Bug fix for Asn1Node.ListDecode function. The child node should 
+            	be added after loading the child data.
+            	
+             09/25/2003: 
+            	Added functions:
+            	public static long Asn1Node.GetDescendantNodeCount(Asn1Node node)
+             void Asn1Parser.LoadPemData(string fileName).
+             
+            	</code>	
+             </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.VersionInfo.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.VersionInfo.VersionStr">
+            <summary>
+            Get version string.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.VersionInfo.CopyrightStr">
+            <summary>
+            Get copyright string.
+            
+            <code>
+            Copyright (c) 2003,2004,2005 Liping Dai. All rights reserved.
+            Web: www.lipingshare.com
+            Email: lipingshare@yahoo.com
+                                                                                          
+            Copyright and Permission Details:                                             
+            =================================                                             
+            Permission is hereby granted, free of charge, to any person obtaining a copy  
+            of this software and associated documentation files (the "Software"), to deal 
+            in the Software without restriction, including without limitation the rights  
+            to use, copy, modify, merge, publish, distribute, and/or sell copies of the   
+            Software, subject to the following conditions:                                
+                                                                                          
+            1. Redistributions of source code must retain the above copyright notice, this
+            list of conditions and the following disclaimer.                              
+                                                                                          
+            2. Redistributions in binary form must reproduce the above copyright notice,  
+            this list of conditions and the following disclaimer in the documentation     
+            and/or other materials provided with the distribution.                        
+                                                                                          
+            THE SOFTWARE PRODUCT IS PROVIDED 揂S IS?WITHOUT WARRANTY OF ANY KIND,        
+            EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED         
+            WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR        
+            A PARTICULAR PURPOSE.                                                         
+            </code>
+            
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.VersionInfo.ContactInfo">
+            <summary>
+            Get contact information.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.VersionInfo.UpdateUrl">
+            <summary>
+            Get update url.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.VersionInfo.Author">
+            <summary>
+            Get author.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.VersionInfo.ReleaseDate">
+            <summary>
+            Get release date.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.NamespaceDoc">
+            <summary>
+            Asn1Processor library is designed to make it easy to compose, analysize, and modify 
+            ASN.1 DER encoded data. 
+            "ASN.1 Editor" is a sample project that uses the Asn1Processor library to view 
+            and to edit DER encoded data.
+            To see more information about ASN.1 Editor please visit: www.lipingshare.com/Asn1Editor .
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1Parser">
+            <summary>
+            ASN.1 encoded data parser.
+            This a higher level class which unilized Asn1Node class functionality to 
+            provide functions for ASN.1 encoded files. 
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.LoadData(System.String)">
+            <summary>
+            Load ASN.1 encoded data from a file.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.LoadPemData(System.String)">
+            <summary>
+            Load PEM formated file.
+            </summary>
+            <param name="fileName">PEM file name.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.LoadData(System.IO.Stream)">
+            <summary>
+            Load ASN.1 encoded data from Stream.
+            </summary>
+            <param name="stream">Stream data.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.SaveData(System.String)">
+            <summary>
+            Save data into a file.
+            </summary>
+            <param name="fileName">File name.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.GetNodeByPath(System.String)">
+            <summary>
+            Get a node by path string.
+            </summary>
+            <param name="nodePath">Path string.</param>
+            <returns>Asn1Node or null.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.GetNodeByOid(System.String)">
+            <summary>
+            Get a node by OID.
+            </summary>
+            <param name="oid">OID string.</param>
+            <returns>Asn1Node or null.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.GetNodeTextHeader(System.Int32)">
+            <summary>
+            Generate node text header. This method is used by GetNodeText to put heading.
+            </summary>
+            <param name="lineLen">Line length.</param>
+            <returns>Header string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.ToString">
+            <summary>
+            Generate the root node text description.
+            </summary>
+            <returns>Text string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Parser.GetNodeText(LipingShare.LCLib.Asn1Processor.Asn1Node,System.Int32)">
+            <summary>
+            Generate node text description. It uses GetNodeTextHeader to generate
+            the heading and Asn1Node.GetText to generate the node text.
+            </summary>
+            <param name="node">Target node.</param>
+            <param name="lineLen">Line length.</param>
+            <returns>Text string.</returns>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Parser.ParseEncapsulatedData">
+            <summary>
+            Get/Set parseEncapsulatedData. Reloading data is required after this property is reset.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Parser.RawData">
+            <summary>
+            Get raw ASN.1 encoded data.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1Parser.RootNode">
+            <summary>
+            Get root node.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1TreeNode">
+            <summary>
+            Asn1TreeNode is derived from System.Windows.Forms.TreeNode.
+            It includeds an Asn1Node member "asn1Node".
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1TreeNode.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1TreeNode.#ctor(LipingShare.LCLib.Asn1Processor.Asn1Node,System.UInt32)">
+            <summary>
+            Use an Asn1Node and display label mask to construct an Asn1TreeNode.
+            Mask is defined in <see cref="T:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask"/>.
+            </summary>
+            <param name="node">node.</param>
+            <param name="mask">mask <see cref="T:LipingShare.LCLib.Asn1Processor.Asn1Node.TagTextMask"/>.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1TreeNode.AddSubNode(LipingShare.LCLib.Asn1Processor.Asn1TreeNode,System.UInt32,System.Windows.Forms.TreeView)">
+            <summary>
+            Following node.Adn1Node to add subnodes. It is special for paste a node tree.
+            </summary>
+            <param name="node">node.</param>
+            <param name="mask">mask.</param>
+            <param name="treeView">hosting TreeView control.</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1TreeNode.SearchTreeNode(System.Windows.Forms.TreeNode,LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Search a Asn1Node in the sub tree of treeNode.
+            </summary>
+            <param name="treeNode">The sub tree node.</param>
+            <param name="node">The Asn1Node node.</param>
+            <returns></returns>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.Asn1TreeNode.ANode">
+            <summary>
+            Get asn1Node member object.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.BinaryView">
+            <summary>
+            BinaryView class. It is used to calculate hex view parameters.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.BinaryView.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.BinaryView.SetPar(System.Int32,System.Int32)">
+            <summary>
+            Set hex view parameters. It calls <see cref="M:LipingShare.LCLib.Asn1Processor.BinaryView.CalculatePar"/> to get the parameters.
+            <code>
+            Parameters Definition:
+            000000  30 82 05 32 30 82 04 1A  A0 03 02 01 02 02 0A 1F  0..20...........
+            000010  CE 8F 20 00 00 00 00 00  22 30 0D 06 09 2A 86 48  .. ....."0...*.H
+            |----|offsetWidth                                         |--dataWidth --|
+            |----- hexWidth ---------------------------------------|
+            |----- totalWidth -------------------------------------------------------|
+            </code>
+            </summary>
+            <param name="offsetWidth">input</param>
+            <param name="dataWidth">input</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.BinaryView.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor, it calls <see cref="M:LipingShare.LCLib.Asn1Processor.BinaryView.SetPar(System.Int32,System.Int32)"/> to set the parameters.
+            </summary>
+            <param name="offsetWidth">input</param>
+            <param name="dataWidth">input</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.BinaryView.CalculatePar">
+            <summary>
+            Calculate hex view parameters.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.BinaryView.GenerateText(System.Byte[])">
+            <summary>
+            Generate hex view text string by calling <see cref="M:LipingShare.LCLib.Asn1Processor.BinaryView.GetBinaryViewText(System.Byte[],System.Int32,System.Int32)"/>.
+            </summary>
+            <param name="data">source byte array.</param>
+            <returns>output string.</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.BinaryView.GetLocation(System.Int32,LipingShare.LCLib.Asn1Processor.ByteLocation)">
+            <summary>
+            Calculate the byte <see cref="T:LipingShare.LCLib.Asn1Processor.ByteLocation"/> by offset.
+            </summary>
+            <param name="byteOffset"></param>
+            <param name="loc"></param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.BinaryView.GetBinaryViewText(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Generate "Detail" hex view text.
+            </summary>
+            <param name="data">source byte array.</param>
+            <param name="offsetWidth">offset text width.</param>
+            <param name="dataWidth">data text width</param>
+            <returns>detail hex view string.</returns>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.BinaryView.OffsetWidth">
+            <summary>
+            Get offsetWidth.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.BinaryView.DataWidth">
+            <summary>
+            Get dataWidth.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.BinaryView.TotalWidth">
+            <summary>
+            Get totalWidth.
+            </summary>
+        </member>
+        <member name="P:LipingShare.LCLib.Asn1Processor.BinaryView.HexWidth">
+            <summary>
+            Get hexWidth.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.ByteLocation">
+            <summary>
+            ByteLocation class is used by <see cref="T:LipingShare.LCLib.Asn1Processor.BinaryView"/> to transfer 
+            location parameters.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.ByteLocation.line">
+            <summary>
+            line number.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.ByteLocation.hexColLen">
+            <summary>
+            Hex encoded data length.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.ByteLocation.hexOffset">
+            <summary>
+            Hex encoded data offset.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.ByteLocation.chColLen">
+            <summary>
+            Character length.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.ByteLocation.chOffset">
+            <summary>
+            Character offset.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.ByteLocation.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1ClipboardData">
+            <summary>
+            Maintaining ASN.1 DER encoded clipboard data.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1ClipboardData.#ctor">
+            <summary>
+            constructor.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1ClipboardData.asn1FormatName">
+            <summary>
+            ASN.1 clipboard data format name.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1ClipboardData.Copy(LipingShare.LCLib.Asn1Processor.Asn1Node)">
+            <summary>
+            Copy Asn1Node data into clipboard as Asn1NodeDataFormat and Text format.
+            </summary>
+            <param name="node">Asn1Node</param>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1ClipboardData.Paste">
+            <summary>
+            Paste clipboard data as an Asn1Node. It try to get data from 
+            Asn1NodeDataFormat first, then try Text data format.
+            </summary>
+            <returns>Asn1Node</returns>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1ClipboardData.IsDataReady">
+            <summary>
+            Check if there is ASN.1 DER encoded data in the clipboard.
+            </summary>
+            <returns>true:Yes; false:No</returns>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1Tag">
+            <summary>
+            Define ASN.1 tag constants.
+            </summary>
+            
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.TAG_MASK">
+            <summary>
+            Tag mask constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.BOOLEAN">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.INTEGER">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.BIT_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.OCTET_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.TAG_NULL">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.OBJECT_IDENTIFIER">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.OBJECT_DESCRIPTOR">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.EXTERNAL">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.REAL">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.ENUMERATED">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.UTF8_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.RELATIVE_OID">
+            <summary>
+            Relative object identifier.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.SEQUENCE">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.SET">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.NUMERIC_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.PRINTABLE_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.T61_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.VIDEOTEXT_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.IA5_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.UTC_TIME">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.GENERALIZED_TIME">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.GRAPHIC_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.VISIBLE_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.GENERAL_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.UNIVERSAL_STRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1Tag.BMPSTRING">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1Tag.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.LCLib.Asn1Processor.Asn1TagClasses">
+            <summary>
+            Define ASN.1 tag class constants.
+            </summary>
+            
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1TagClasses.CLASS_MASK">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1TagClasses.UNIVERSAL">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1TagClasses.CONSTRUCTED">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1TagClasses.APPLICATION">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1TagClasses.CONTEXT_SPECIFIC">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="F:LipingShare.LCLib.Asn1Processor.Asn1TagClasses.PRIVATE">
+            <summary>
+            Constant value.
+            </summary>
+        </member>
+        <member name="M:LipingShare.LCLib.Asn1Processor.Asn1TagClasses.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+    </members>
+</doc>

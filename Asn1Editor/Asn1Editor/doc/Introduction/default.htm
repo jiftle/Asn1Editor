@@ -1,0 +1,366 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>ASN.1 Editor</title>
+</head>
+
+<body>
+
+<div class="Section1">
+  <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+mso-outline-level:2"><b><span style="font-size:16.0pt;font-family:Verdana;
+color:#FF9900">ASN.1 Editor<o:p>
+  </o:p>
+  </span></b></p>
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;
+ mso-cellspacing:0in;mso-padding-alt:0in 5.4pt 0in 5.4pt">
+    <tr>
+      <td width="100%" valign="top" style="width:100.0%;padding:.75pt .75pt .75pt .75pt">
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+  mso-outline-level:2"><b><span style="font-size:13.0pt;font-family:Verdana;
+  color:#FF9900">Introduction: <o:p>
+        </o:p>
+        </span></b></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black">ASN.1*
+        DER** encoded data is widely used in digital security protocols. The
+        encoded data is not readable by regular text editor. The ASN.1 Editor is
+        designed to allow user to view and modify the encoded data
+        easily.&nbsp;</span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size: 10.0pt; font-family: Verdana; color: black">Note:
+        </span><span style="font-size:10.0pt;font-family:Verdana;color:black">This editor doesn’t do any data verification and schema
+        checking. The user needs to make sure the edited data conform to certain
+        constrains.&nbsp;</span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size: 10.0pt; font-family: Verdana; color: black">*
+        </span><span style="font-size:10.0pt;font-family:Verdana;color:black">ASN.1:
+        Abstract Syntax Notation One</span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size: 10.0pt; font-family: Verdana; color: black">**
+        DER: </span><span style="font-size:10.0pt;font-family:Verdana;color:black">Distinguished
+        Encoding Rules</span><span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span style="font-size:13.0pt;font-family:Verdana;color:#FF9900"><a name="Main View">Main
+        View</a>:</span></b><span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><!--[if gte vml 1]><v:shapetype
+   id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+   path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+   <v:stroke joinstyle="miter"/>
+   <v:formulas>
+    <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+    <v:f eqn="sum @0 1 0"/>
+    <v:f eqn="sum 0 0 @1"/>
+    <v:f eqn="prod @2 1 2"/>
+    <v:f eqn="prod @3 21600 pixelWidth"/>
+    <v:f eqn="prod @3 21600 pixelHeight"/>
+    <v:f eqn="sum @0 0 1"/>
+    <v:f eqn="prod @6 1 2"/>
+    <v:f eqn="prod @7 21600 pixelWidth"/>
+    <v:f eqn="sum @8 21600 0"/>
+    <v:f eqn="prod @7 21600 pixelHeight"/>
+    <v:f eqn="sum @10 21600 0"/>
+   </v:formulas>
+   <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+   <o:lock v:ext="edit" aspectratio="t"/>
+  </v:shapetype><v:shape id="_x0000_i1168" type="#_x0000_t75" style='width:467.25pt;
+   height:390pt'>
+   <v:imagedata src="HomePage_files/image001.png" o:title=""/>
+  </v:shape><![endif]-->
+        <![if !vml]>
+        <![endif]>
+        <o:p>
+        <span style="font-size:10.0pt;font-family:Verdana;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
+AR-SA"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:467.25pt;
+ height:390pt'>
+ <v:imagedata src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/msoclip1/01/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+        <img border="0" src="Introd1.jpg" width="716" height="535"></span>
+        </span></p>
+        <h2>Main Features:</h2>
+        <h3>1. Dump text data:</h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black">You
+        can view the selected node branch text dump by right click the
+        designated node and select “<a href="#Text Viewer">View Node Text</a>”.<o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span style="font-size:13.0pt;font-family:Verdana;color:#FF9900"><a name="Text Viewer">Text
+        Viewer</a>:</span></b><span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><!--[if gte vml 1]><v:shape
+   id="_x0000_i1184" type="#_x0000_t75" style='width:431.25pt;height:329.25pt'>
+   <v:imagedata src="HomePage_files/image005.png" o:title=""/>
+  </v:shape><![endif]-->
+        <![if !vml]>
+        <![endif]>
+        <o:p>
+        <span style="font-size:10.0pt;font-family:Verdana;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
+AR-SA"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:431.25pt;
+ height:329.25pt'>
+ <v:imagedata src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/msoclip1/04/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+        <img src="DerEdi3.jpg" v:shapes="_x0000_i1025" width="575" height="439"></span>
+        </span></p>
+        <h3>2. Atomically Parse “encapsulates” data</h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black">OCTET
+        and BITSTRING may encapsulates DER encoded data, for example:<o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-layout-grid-align: none; text-autospace: none; line-height: 100%"><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;"><img border="0" src="Introd1.gif" width="640" height="253"><o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-size:9.0pt;font-family:&quot;Courier New&quot;"><![if !supportEmptyParas]>
+        &nbsp;</span><span style="font-size:10.0pt;font-family:Verdana;color:black">ASN.1 Editor
+        can automatically parse the data structure.<o:p>
+        </o:p>
+        </span></p>
+        <h3>3. Hex Data Viewer<o:p>
+        </o:p>
+        </h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><![if !supportEmptyParas]>
+        Click: View-&gt;Hex Viewer, you can view the binary data structure.</span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span style="font-size:13.0pt;font-family:Verdana;color:#FF9900"><a name="Hex Viewer">Hex
+        Viewer</a>:</span></b><span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><!--[if gte vml 1]><v:shape
+   id="_x0000_i1167" type="#_x0000_t75" style='width:427.5pt;height:354.75pt'>
+   <v:imagedata src="HomePage_files/image003.png" o:title=""/>
+  </v:shape><![endif]-->
+        <![if !vml]>
+        <![endif]>
+        <o:p>
+        <span style="font-size:10.0pt;font-family:Verdana;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
+AR-SA"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:427.5pt;
+ height:354.75pt'>
+ <v:imagedata src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/msoclip1/03/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+        <img src="DerEdi2.jpg" v:shapes="_x0000_i1025" width="570" height="473"></span>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">&nbsp;</p>
+        <h3>4. Extensible OID table<span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">OID.txt
+        file is installed in the same directory as Asn1Editor.EXE.&nbsp;</p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Here
+        is the sample records:</p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">0.9.2342.19200300.100.1.25, domainComponent<br>
+        1.2.36.68980861.1.1.10, Signet pilot<br>
+        1.2.36.68980861.1.1.11, Signet intraNet<br>
+        1.2.36.68980861.1.1.2, Signet personal<br>
+        1.2.36.68980861.1.1.20, Signet securityPolicy</p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">OID
+        and the description are comma separated. It can be extend in
+        order to add in additional OIDs.</p>
+        <h3>5. Change node content<span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Double
+        click the selected node you can see the &quot;<a href="#Node Content Editor">Node
+        Content Editor</a>&quot;. </p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span style="font-size:13.0pt;font-family:Verdana;color:#FF9900"><a name="Node Content Editor">Node
+        Content Editor</a>:</span></b><span style="font-size:10.0pt;font-family:Verdana;
+  color:black"><o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><!--[if gte vml 1]><v:shape
+   id="_x0000_i1186" type="#_x0000_t75" style='width:420.75pt;height:258.75pt'>
+   <v:imagedata src="HomePage_files/image007.png" o:title=""/>
+  </v:shape><![endif]-->
+        <![if !vml]>
+        <![endif]>
+        <o:p>
+        <span style="font-size:10.0pt;font-family:Verdana;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
+AR-SA"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:420.75pt;
+ height:258.75pt'>
+ <v:imagedata src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/msoclip1/05/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+        <img src="DerEdi4.jpg" v:shapes="_x0000_i1025" width="561" height="345"></span>
+        </span></p>
+        <h3>6. Save selected node data<span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">You
+        can save designated node data into a file by right click the node and
+        select &quot;Save selected node as...&quot;.</p>
+        <h3>7. Copy selected node data into clipboard<span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Right
+        click the node and select &quot;Copy&quot;.</p>
+        <h3>8. Paste node from clipboard<span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">Right
+        click the insert point node and select &quot;Paste as last child
+        node&quot;, &quot;Paste before current node&quot;, or &quot;Paste after
+        current node&quot; to perform the insert operation.</p>
+        <h3>9. Binary/Hex/Base64 data converter<span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></h3>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><![if !supportEmptyParas]>
+        <![endif]>
+        <o:p>
+        </o:p>
+        Converting the data format between Hex, Base64, and PEM by the
+        &quot;<a href="#Data Converter">Data Converter</a>&quot;.</span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span style="font-size:13.0pt;font-family:Verdana;color:#FF9900"><a name="Data Converter">Data
+        Converter</a>:</span></b><span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><!--[if gte vml 1]><v:shape
+   id="_x0000_i1185" type="#_x0000_t75" style='width:430.5pt;height:323.25pt'>
+   <v:imagedata src="HomePage_files/image009.png" o:title=""/>
+  </v:shape><![endif]-->
+        <![if !vml]>
+        <![endif]>
+        <o:p>
+        <span style="font-size:10.0pt;font-family:Verdana;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
+AR-SA"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:430.5pt;
+ height:323.25pt'>
+ <v:imagedata src="file:///C:/DOCUME~1/ADMINI~1/LOCALS~1/Temp/msoclip1/06/clip_image001.png"
+  o:title=""/>
+</v:shape><![endif]-->
+        <img src="DerEdi5.jpg" v:shapes="_x0000_i1025" width="574" height="431"></span></o:p>
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style="font-size:10.0pt;font-family:Verdana;color:black"><![if !supportEmptyParas]>
+        &nbsp;<![endif]>
+        <o:p>
+        &nbsp;
+        </span></p>
+        <p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto">&nbsp;</p>
+        <p class="MsoNormal"><b>Author: Liping Dai</b></p>
+        <p class="MsoNormal"><b>Web: <a href="http://www.lipingshare.com">www.lipingshare.com</a></b></p>
+        <p class="MsoNormal"><b>Email: <a href="mailto:LipingShare@yahoo.com">LipingShare@yahoo.com</a></b></p>
+        <p class="MsoNormal"><b>August, 2003</b></p>
+        <p class="MsoNormal"><![if !supportEmptyParas]> &nbsp;<![endif]>
+        <span style="font-size:10.0pt;font-family:Verdana;color:black"><o:p>
+        </o:p>
+        </span>
+      </td>
+    </tr>
+  </table>
+  <p class="MsoNormal">&nbsp;</p>
+</div>
+
+</body>
+
+</html>

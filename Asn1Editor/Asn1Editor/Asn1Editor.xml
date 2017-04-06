@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Asn1Editor</name>
+    </assembly>
+    <members>
+        <member name="T:LipingShare.Asn1Editor.About">
+            <summary>
+            Summary description for About.
+            </summary>
+        </member>
+        <member name="F:LipingShare.Asn1Editor.About.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.About.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.About.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.Asn1Editor.FormDerEditor">
+            <summary>
+            Summary description for Form1.
+            
+            09/25/2003:
+            RefreshTreeView() is added to replace BuildTreeView() to do the tree refreshing during the editing.
+            The treeView refreshing is smoother now.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.FormDerEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.FormDerEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.FormDerEditor.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:LipingShare.Asn1Editor.FormNodeContentEditor">
+            <summary>
+            Summary description for FormNodeContentEditor.
+            </summary>
+        </member>
+        <member name="F:LipingShare.Asn1Editor.FormNodeContentEditor.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.FormNodeContentEditor.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.FormNodeContentEditor.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.Asn1Editor.FormViewText">
+            <summary>
+            Summary description for FormViewNodeText.
+            </summary>
+        </member>
+        <member name="F:LipingShare.Asn1Editor.FormViewText.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.FormViewText.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.FormViewText.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.Asn1Editor.HexViewer">
+            <summary>
+            Summary description for HexViewer.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.HexViewer.ResetWidth">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LipingShare.Asn1Editor.HexViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.Asn1Editor.NamespaceDoc">
+            <summary>
+            ASN.1* DER** encoded data is widely used in digital security protocols. 
+            The encoded data is not readable by regular text editor. The ASN.1 Editor is 
+            designed to view and modify the encoded data easily. 
+            <br></br>
+            ASN.1 Editor doesn’t do any schema checking. The user needs to make sure the 
+            edited data conform to certain constrains (i.e. OCSP request or Key Info structure). 
+            <br></br>
+            ASN.1: Abstract Syntax Notation One.
+            DER: Distinguished Encoding Rules. 
+            </summary>
+        </member>
+    </members>
+</doc>

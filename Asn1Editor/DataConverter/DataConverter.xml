@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataConverter</name>
+    </assembly>
+    <members>
+        <member name="T:LipingShare.DataConverter.FormConvertData">
+            <summary>
+            Summary description for FormConvertData.
+            </summary>
+        </member>
+        <member name="M:LipingShare.DataConverter.FormConvertData.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LipingShare.DataConverter.FormConvertData.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LipingShare.DataConverter.NamespaceDoc">
+            <summary>
+            Converting the data format between Hex, Base64, and PEM.
+            </summary>
+        </member>
+    </members>
+</doc>
